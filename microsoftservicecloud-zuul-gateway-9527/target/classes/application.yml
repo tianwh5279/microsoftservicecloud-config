@@ -1,0 +1,26 @@
+server:
+  port: 9527
+zuul: 
+  prefix: /djtu
+  ignored-services: "*"
+  routes: 
+    mydept.serviceId: microsoftservicecloud-dept
+    mydept.path: /twh/**
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka,http://eureka7002.com:7002/eureka,http://eureka7003.com:7003/eureka
+  instance:
+    instance-id: gateway-9527.com  #自定义服务名称
+    prefer-ip-address: true  #访问路径显示主机ip地址
+
+spring: 
+  application:
+    name: microsoftservicecloud-zuul-gateway
+
+info:
+  app.name: djtu-microsoftservicecloud
+  company.name: www.djtu.com
+  build.artifactId: microsoftservicecloud-zuul-gateway-9527
+  build.version: 0.0.1-SNAPSHOT
+      
