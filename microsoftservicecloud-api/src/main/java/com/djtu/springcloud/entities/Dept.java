@@ -14,6 +14,8 @@ import lombok.experimental.Accessors;
 @Accessors(chain = true)
 public class Dept implements Serializable {// 必须序列化...
 
+	//测试下git是怎么提交上去的
+	
 	private Long deptno;// 主键
 	private String dbname;// 部门名称
 	// 来自哪个数据库，因为微服务架构可以一个服务对应一个数据库，同一信息被存储到不同数据库。
